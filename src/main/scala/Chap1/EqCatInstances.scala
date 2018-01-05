@@ -8,9 +8,6 @@ import cats.instances.string._
 object EqCatInstances {
 
   implicit val eqCat =  Eq.instance[Cat] { (c1, c2) =>
-    val eqInt = Eq[Int]
-    val eqStr = Eq[String]
-
     (c1.name === c2.name) &&
       (c1.age === c2.age) &&
       (c1.color === c2.color)
